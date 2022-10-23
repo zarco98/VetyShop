@@ -15,7 +15,7 @@ const productosSchema=mongoose.Schema({
     },
     descripcion:{
         type: String,
-        require:[true, "Por favor registre una descripcion para el produdcto"]
+        require:[true, "Por favor registre una descripcion para el producto"]
     },
     calificacion:{
         type:Number,
@@ -39,7 +39,7 @@ const productosSchema=mongoose.Schema({
         enum:{
             values:[
                 "Alimento seco",
-                "Alimento húmedo",
+                "Alimento humedo",
                 "Accesorios",
                 "Cuidado e Higiene",
                 "Medicamentos",
@@ -50,7 +50,7 @@ const productosSchema=mongoose.Schema({
     },
     vendedor:{
         type:String,
-        required:[true,"Por favor registre el vendedor del prodcuto"]
+        required:[true,"Por favor registre el vendedor del producto"]
     },
     inventario:{
         type:Number,
