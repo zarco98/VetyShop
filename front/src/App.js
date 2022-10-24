@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import Header from './components/layout/Header';
-import Footer from './components/Footer';
+import { Footer } from './components/layout/Footer';
 
 function App() {
   return (
@@ -15,9 +15,10 @@ function App() {
       <center>Contenido aqui</center>
       <center>Contenido aqui</center>
       <center>Contenido aqui</center>
+      
       <Footer />
-
-    </div>
+      
+      </div>
   );
 }
 
