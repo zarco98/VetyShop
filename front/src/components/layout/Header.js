@@ -11,16 +11,16 @@ const Header = () => {
             </div>
 
             <div className='col-12 col-md-6 mt-2 mt-md-0'>
-                <div class="input-group">
+                <div className="input-group">
                     <input
                         type="text"
-                        id="search-field"
+                        id="search_field"
                         class="form-control"
                         placeholder='¿Qué producto busca?'></input>
                         <div class="input-group-append">
                             <button id="search-btn" class="btn">
-                                <i class=" fa fa fa" aria-hidden="true"></i>    
-                            </button>
+                                <i class="fa fa fa" aria-hidden="true"></i>    
+                                </button>
                         </div>
                 </div>
             </div>
@@ -29,6 +29,7 @@ const Header = () => {
                 <span id="cart" className='ml-3'>Carrito</span>
                 <span className="ml-1" id="cart_count">2</span>
             </div>
+
         </nav>
     </Fragment>
   )
