@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react'
+import MetaData from './layout/MetaData'
 
 export const Home = () => {
   return (
     <Fragment>
+        <MetaData title="Lo mejor para tu compañero"></MetaData>
         <h1 id="encabezado_productos">Últimos productos</h1>
 
         <section id="productos" className='container mt-5'>
@@ -81,7 +83,6 @@ export const Home = () => {
                 </div>
             </div>
         </section>
-
     </Fragment>
   )
 }
