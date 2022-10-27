@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../actions/productActions'
 import { Link } from 'react-router-dom'
 import { useAlert } from 'react-alert'
-import { ALL_PRODUCTS_REQUEST } from '../constants/productConstants'
 
 
 export const Home = () => {
