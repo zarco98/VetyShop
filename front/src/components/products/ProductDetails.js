@@ -85,7 +85,7 @@ export const ProductDetails = () => {
               data-toggle="modal" data-target="#ratingModal">Deja tu Opinion</button>
             <div className="alert alert-danger mt-5" type="alert">Inicia Sesión para dejar tu review</div>
 
-            {/Mensaje emergente para dejar opinion y calificacion/}
+            {/*Mensaje emergente para dejar opinion y calificacion*/}
             <div className="row mt-2 mb-5">
               <div className="rating w-50">
                 <div className="modal fade" id="ratingModal" tabIndex="-1" role="dialog"

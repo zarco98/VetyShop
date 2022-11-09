@@ -67,7 +67,7 @@ usuarioSchema.methods.getJwtToken = function () {
 }
 
 //Generar un token para reset de contraseña
-usuarioSchema.methods.genResetPasswordToken = async function () {
+usuarioSchema.methods.genResetPasswordToken = function () {
     const resetToken = crypto.randomBytes(20).toString('hex')
 
     //Hashear y setear resetToken
