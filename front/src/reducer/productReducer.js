@@ -6,7 +6,7 @@ import { ALL_PRODUCTS_REQUEST,
     PRODUCT_DETAILS_FAIL,
     CLEAR_ERRORS} from "../constants/productConstants";
 
-export const productsReducer = (state ={ products: []}, action)=>{
+export const productsReducer = (state ={ productos: []}, action)=>{
     switch(action.type){
         case ALL_PRODUCTS_REQUEST:
             return{
@@ -17,8 +17,10 @@ export const productsReducer = (state ={ products: []}, action)=>{
         case ALL_PRODUCTS_SUCCESS:
             return{
                 loading:false,
-                productos: action.payload.productos,
-                cantidad: action.payload.cantidad
+                productos: action.payload.products,
+                productsCount: action.payload.productsCount,
+                resPerPage: action.payload.resPerPage,
+                filteredProductsCount: action.payload.filteredProductsCount
             }
 
         case ALL_PRODUCTS_FAIL:

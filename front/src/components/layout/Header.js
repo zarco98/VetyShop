@@ -35,7 +35,7 @@ const Header = () => {
                             <span>Panel de Control</span>
                         </Link>
                         <div className='dropdown-menu' aria-labelledby='dropDownMenu'>
-                            <Link className='dropdown-item' to="/admin/dashboard">Adm.Productos</Link>
+                            <Link className='dropdown-item' to="/dashboard">Adm.Productos</Link>
                             <Link className='dropdown-item' to="/">Pedidos</Link>
                             <Link className='dropdown-item' to="/">Mi Cuenta</Link>
                             <Link className='dropdown-item' to="/">Cerrar Sesión</Link>

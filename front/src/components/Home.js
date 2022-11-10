@@ -1,13 +1,15 @@
-import React, { Fragment, useEffect } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import MetaData from './layout/MetaData'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProducts } from '../actions/productActions'
 import { Link } from 'react-router-dom'
 import { useAlert } from 'react-alert'
+import Pagination from 'react-js-pagination'
 
 
 export const Home = () => {
-    const { loading, productos, error } = useSelector(state => state.products)
+    const [currentPage, setCurrentPage]=useState(1)
+    const { loading, productos, error, resPerPage, productsCount } = useSelector(state => state.products)
     const alert = useAlert();
 
     const dispatch = useDispatch();
@@ -15,9 +17,13 @@ export const Home = () => {
         if (error){
             return alert.error(error)
         }
-        dispatch(getProducts());
+        dispatch(getProducts(currentPage));
         alert.success("OK")
-    }, [dispatch])
+    }, [dispatch, alert, error, currentPage])
+
+    function setCurrentPageNo(pageNumber){
+        setCurrentPage(pageNumber)
+    }
     return (
         <Fragment>
             {loading ? <i class="fa fa-spinner fa-spin fa-3x fa-fw">Cargando...</i> :(
@@ -48,6 +54,21 @@ export const Home = () => {
                             ))}
                         </div>
                     </section>
+
+                    <div className='d-flex justify-content-center mt-5'>
+                        <Pagination
+                        activePage={currentPage}
+                        itemsCountPerPage={resPerPage}
+                        totalItemsCount={productsCount}
+                        onChange={setCurrentPageNo}
+                        nextPageText={'Siguiente'}
+                        prevPageText={'Anterior'}
+                        firstPageText={'Primera'}
+                        lastPageText={'Última'}
+                        itemClass='page-item'
+                        linkClass='page-link'
+                        />
+                    </div>
                 </Fragment>
             )}
         </Fragment>
