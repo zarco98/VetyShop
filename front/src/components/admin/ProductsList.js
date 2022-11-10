@@ -18,7 +18,7 @@ export const ProductsList = () => {
         }
 
         dispatch(getProducts());
-    }, [dispatch])
+    }, [dispatch, alert, error])
 
     const setProducts = () => {
         const data = {
