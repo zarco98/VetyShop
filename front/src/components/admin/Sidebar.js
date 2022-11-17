@@ -18,7 +18,7 @@ const Sidebar = () => {
                             <Link to="/productList"><i className='fa fa-clipboard'></i>Lista de Productos</Link>
                         </li>
                         <li>
-                            <Link to="/"><i className='fa fa-plus'></i>Crear Producto</Link>
+                            <Link to="/nuevoProducto"><i className='fa fa-plus'></i>Crear Producto</Link>
                         </li>
                     </ul>
                 </li>
