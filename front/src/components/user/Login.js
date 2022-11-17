@@ -53,7 +53,7 @@ export const Login = () => {
                                         onChange={(e) => setPassword(e.target.value)}></input>
                                 </div>
 
-                                <Link to="/password/forgot" className='float-right mb-4'>Olvidó su contraseña?</Link>
+                                <Link to="/forgotPassword" className='float-right mb-4'>Olvidó su contraseña?</Link>
 
                                 {/*Botón Iniciar Sesión*/}
                                 <button id="login_button" type="submit" className='btn btn-block py-3'>LOGIN</button>

@@ -1,23 +1,22 @@
-const { SchemaTypeOptions } = require("mongoose");
 const nodemailer= require("nodemailer")
 
-const sendEmail= async options =>{
-    const transport= nodemailer.createTransport({
+const sendEmail = async options =>{
+    const transport = nodemailer.createTransport({
         host: "smtp.office365.com",
         port: 587,
         auth: {
-          user: "kevinscott26@hotmail.com",
-          pass: "Scotty102030"
+          user: "ozzyta@outlook.com",
+          pass: "lhqyxlcozvmnrlkw"
         }
       });
-      const mensaje={
-        from:"VetyShop Store <kevinscott26@hotmail.com>",
+    const mensaje={
+        from: "VetyShop Store <ozzyta@outlook.com>",
         to: options.email,
         subject: options.subject,
         text: options.mensaje
-      }
+    }
 
-      await transport.sendMail(mensaje)
+    await transport.sendMail(mensaje)
 }
 
-module.exports=sendEmail;
+module.exports= sendEmail;
